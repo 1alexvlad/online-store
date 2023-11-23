@@ -10,8 +10,13 @@ def index(request):
     return render(request, "myapp/index.html", context)
 
 # Динамическая ссылка
-def indexItem(request, id):
-    return HttpResponse("Your item id is: " + str(id))
+def indexItem(request, my_id):
+    item = Product.objects.get(id=my_id)
+    context = {
+        'item': item
+    }
+    return render (request, "myapp/detail.html", context)
 
+# Детальная страница - ссылки (index.html)
 def contact(request):
     return render(request, "myapp/contacts.html")
