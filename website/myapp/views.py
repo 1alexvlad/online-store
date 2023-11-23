@@ -16,7 +16,3 @@ def indexItem(request, my_id):
         'item': item
     }
     return render (request, "myapp/detail.html", context)
-
-# Детальная страница - ссылки (index.html)
-def contact(request):
-    return render(request, "myapp/contacts.html")
