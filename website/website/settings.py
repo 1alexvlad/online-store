@@ -123,3 +123,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Куда будут сохранятся картинки
+MEDIA_ROOT = BASE_DIR / 'media'
+# Для показа картинки
+MEDIA_URL = '/media/'
