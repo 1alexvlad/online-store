@@ -1,4 +1,5 @@
 {% extends "myapp/base.html" %}
+{% load humanize %}
 {% load static %}
 
 {% block content %}
@@ -19,7 +20,7 @@
         <img class="w-full h-[400px]" src="{{ item.image.url }}" alt="">
         <div class="px-6 py-4">
           <p class="font-bold text-xl mb-2">{{ item.name }}</p>
-          <p class="font-bold text-xl text-green-500 mb-2">${{ item.price }}</p>
+          <p class="font-bold text-xl text-green-500 mb-2">${{ item.price | intcomma }}</p>
           <p class="text-gray-700 text-base">{{item.description}}</p>
         </div>
       </div>  
