@@ -9,9 +9,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('myapp:index')
+            return redirect("myapp:index")
     form = NewUserForm()
-    context = {
-        "form": form
-    }
+    context = {"form": form}
     return render(request, "users/register.html", context)
