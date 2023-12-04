@@ -134,4 +134,6 @@ MEDIA_URL = '/media/'
 
 # ПЕРЕНАПРАВЛЕНИЕ
 LOGIN_REDIRECT_URL = 'myapp:index'
-LOGOUT_REDIRECT_URL = 'myapp:index'
+# LOGOUT_REDIRECT_URL = 'myapp:index'
+
+# LOGIN_URL = 'users:login'
